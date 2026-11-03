@@ -2,7 +2,7 @@ import { MOCK_SHOPS } from "../mock-shops/database";
 import type { AgentStep, MicroShop, NegotiationResult } from "../types";
 
 export interface ParsedBuyerIntent {
-  category: "bakery" | "services" | "dining" | "craft";
+  category: "bakery" | "services" | "dining" | "craft" | "laundry";
   itemQuery: string;
   location: string;
   budget: number | null;
@@ -16,8 +16,10 @@ export function parseBuyerIntent(prompt: string): ParsedBuyerIntent {
   const p = prompt.toLowerCase();
 
   // Category detection
-  let category: "bakery" | "services" | "dining" | "craft" = "bakery";
-  if (/plumb|leak|pipe|water heater|sink|drain|water|toilet|水暖|漏水|水喉|修水管|通渠/i.test(p)) {
+  let category: "bakery" | "services" | "dining" | "craft" | "laundry" = "laundry";
+  if (/laundr|wash|dry clean|fold|coat|clothes|comforter|linen|洗衣|干洗|洗烘|折叠|大衣/i.test(p)) {
+    category = "laundry";
+  } else if (/plumb|leak|pipe|water heater|sink|drain|water|toilet|水暖|漏水|水喉|修水管|通渠/i.test(p)) {
     category = "services";
   } else if (/bento|lunch|catering|meal|vegan|tofu|food|dim sum|box|便当|午餐|聚餐|快餐|素食|简餐/i.test(p)) {
     category = "dining";

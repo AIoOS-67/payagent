@@ -33,3 +33,11 @@ test("Autonomous Agent Negotiation: Budget Match & Custom SLA", async () => {
   assert.equal(result.negotiationLog[1].role, "merchant_agent");
   assert.equal(result.negotiationLog[2].role, "buyer_agent");
 });
+
+test("Autonomous Agent Negotiation: Ken Li Brooklyn Laundromat Custom Bundle", async () => {
+  const result = await executeAgentNegotiation("I need 20 lbs of wash-and-fold laundry plus 1 wool coat dry cleaned in Sunset Park Brooklyn tonight, budget $40.");
+  assert.equal(result.shop.category, "laundry");
+  assert.equal(result.shop.ownerName, "Ken Li");
+  assert.ok(result.totalAmount <= 42, "Agreed bundle total must fit near customer budget");
+  assert.ok(result.negotiationLog.length >= 3, "Must produce Agent dialogue log");
+});

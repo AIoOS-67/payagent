@@ -2,6 +2,32 @@
 
 export const MOCK_SHOPS: MicroShop[] = [
   {
+    id: "shop_brooklyn_laundry",
+    name: "Sunset Park Express Laundromat & Eco Cleaners",
+    ownerName: "Ken Li",
+    category: "laundry",
+    area: "8th Ave Sunset Park, Brooklyn, NY",
+    avatar: "🧺",
+    rating: 4.99,
+    ordersCompleted: 5820,
+    paypalEmail: "ken.laundry.sandbox@ai168.io",
+    agentRules: {
+      baseDeliveryFee: 6.0,
+      freeDeliveryThreshold: 50.0,
+      maxDeliveryMiles: 10,
+      minAdvanceHours: 2,
+      negotiationFlexibility: 0.15, // Up to 15% discount for custom bundles
+      dietaryOptions: ["Eco-friendly Detergent", "Hypoallergenic", "Cold Wash Only", "Hang Dry"],
+      specialties: ["Wash and Fold", "Dry Cleaning", "Doorstep Pickup & Delivery", "Comforter Cleaning"],
+    },
+    sampleItems: [
+      { id: "item_l1", name: "Custom 20 lbs Wash & Fold + 1 Wool Coat Dry Clean Bundle", basePrice: 42.0, description: "Includes hypoallergenic detergent, delicate fabric care, 1 wool winter coat dry clean & doorstep pickup." },
+      { id: "item_l2", name: "Family Wash & Fold Bag (35 lbs)", basePrice: 45.0, description: "Full family laundry bag washed, neatly folded and packaged." },
+      { id: "item_l3", name: "Luxury Down Comforter & Bedding Deep Clean", basePrice: 38.0, description: "High capacity commercial washer with sanitizing steam dry." },
+    ],
+  },
+
+  {
     id: "shop_flushing_bakery",
     name: "Flushing Sweet Art Artisan Bakery",
     ownerName: "Vivian Lin",

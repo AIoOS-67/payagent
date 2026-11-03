@@ -10,9 +10,14 @@ export function Header() {
             <span className="flex size-9 items-center justify-center rounded-xl bg-gradient-to-tr from-[#003087] via-[#0070BA] to-sky-400 text-white shadow-md shadow-sky-500/20">
               <Bot className="size-5" />
             </span>
-            <span className="text-xl font-black tracking-tight">
-              Pay<span className="text-sky-400">Agent</span>
-            </span>
+            <div className="flex flex-col">
+              <span className="text-xl font-black tracking-tight">
+                Pay<span className="text-sky-400">Agent</span>
+              </span>
+              <span className="text-[10px] font-bold tracking-wider text-slate-400 uppercase -mt-1">
+                by AI168.io
+              </span>
+            </div>
           </Link>
           <span className="hidden items-center gap-1 rounded-full border border-sky-400/30 bg-sky-950/60 px-2.5 py-0.5 text-[11px] font-semibold text-sky-300 sm:inline-flex">
             <Sparkles className="size-3 text-sky-400" />

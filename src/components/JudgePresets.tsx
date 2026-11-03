@@ -12,22 +12,22 @@ interface Preset {
 
 export const JUDGE_PRESETS: Preset[] = [
   {
+    id: "laundry",
+    category: "Laundromat & Dry Cleaning",
+    title: "Brooklyn Eco Laundromat (Ken Li)",
+    subtitle: "20 lbs wash-and-fold + 1 wool coat, doorstep pickup tonight, budget $40",
+    prompt: "I need 20 lbs of wash-and-fold laundry plus 1 wool coat dry cleaned. Need doorstep pickup at 8th Ave Sunset Park tonight within 2 hours. My budget is $40.",
+    badge: "Scenario 1 · Brooklyn Laundry",
+    badgeColor: "bg-blue-500/10 text-blue-700 border-blue-200",
+  },
+  {
     id: "cake",
     category: "Artisan Bakery",
     title: "Flushing Birthday Cake",
     subtitle: "Low-sugar matcha cake to Fowler Ave tomorrow 3 PM, budget $50",
     prompt: "I need to order an 8-inch low-sugar matcha birthday cake for my friend at Flushing Fowler Ave tomorrow by 3:00 PM. My budget is $50.",
-    badge: "Scenario 1 · Budget Match",
+    badge: "Scenario 2 · Budget Match",
     badgeColor: "bg-pink-500/10 text-pink-700 border-pink-200",
-  },
-  {
-    id: "plumb",
-    category: "Emergency Services",
-    title: "Brooklyn 8th Ave Sink Leak",
-    subtitle: "Heavy kitchen leak in Sunset Park, urgent 90-min dispatch, budget $140",
-    prompt: "Emergency: My kitchen pipe is leaking heavily at 8th Ave Sunset Park, Brooklyn! Need a licensed plumber within 90 minutes tonight. Budget $140.",
-    badge: "Scenario 2 · Urgent SLA",
-    badgeColor: "bg-blue-500/10 text-blue-700 border-blue-200",
   },
   {
     id: "bento",

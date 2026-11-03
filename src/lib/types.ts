@@ -2,7 +2,7 @@
   id: string;
   name: string;
   ownerName: string;
-  category: "bakery" | "services" | "dining" | "craft";
+  category: "bakery" | "services" | "dining" | "craft" | "laundry";
   area: string;
   avatar: string;
   rating: number;
